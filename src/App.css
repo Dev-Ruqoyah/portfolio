@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+
+
+#tsparticles canvas{
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background:linear-gradient(rgba(0, 0, 0, 0.842),rgba(0, 0, 0, 0.856)),url("https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=5260&h=2750&dpr=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  /* position: fixed; */
+  /* opacity: 0.6; */
+}
+/* .image-link{
+  transition: .9s;
+} */
+/* .image-link{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.image-link img:hover{
+  background: linear-gradient(rgba(0,0,0,00.5),rgba(0,0,0,0.6));
+  transition: .9s;
+  
+}
+.image-link:hover .ancho{
+  opacity: 1;
+  transform: translateY(-30px);
+  transition: .9s;
+} */
+
+.image-container {
+  position: relative;
+  display: inline-block;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black overlay */
   color: white;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition */
 }
 
-.App-link {
-  color: #61dafb;
+.image-container:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+  
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-container:hover .overlay button {
+  
+  transform: translateY(-30px);
+  transition: .9s;
+}
+.project3{
+  height: 410px;
+  object-fit: contain;
 }
